@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
-        <title>Session state management considerations - Application Modernization</title>
+        <title>Session state management - Application Modernization</title>
       
     
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Session state management considerations
+                Session state management
               
             </span>
           
@@ -224,11 +224,224 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../" title="Runtime modernization" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
       Runtime modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Runtime modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-analyze/" title="Analyze" class="md-nav__link">
+      Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-deploy/" title="Deploy" class="md-nav__link">
+      Deploy
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Session state management
+      </label>
+    
+    <a href="./" title="Session state management" class="md-nav__link md-nav__link--active">
+      Session state management
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#session-affinity" class="md-nav__link">
+    Session affinity
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploying-with-session-affinity" class="md-nav__link">
+    Deploying with session affinity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-replication-using-caching-mechanisms" class="md-nav__link">
+    Session replication using caching mechanisms
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prepare-dockerfile-with-caching-configuration" class="md-nav__link">
+    Prepare DockerFile with caching configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-hazelcast-in-openshift" class="md-nav__link">
+    Deploy Hazelcast in OpenShift
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deploy-hazelcast-cluster" class="md-nav__link">
+    Deploy Hazelcast cluster
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-openliberty-configured-for-hazelcast" class="md-nav__link">
+    Deploy OpenLiberty configured for Hazelcast
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-persistence-using-database" class="md-nav__link">
+    Session persistence using database
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liberty-configuration" class="md-nav__link">
+    Liberty configuration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifying-the-dockerfile" class="md-nav__link">
+    Modifying the Dockerfile
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploying-to-openshift" class="md-nav__link">
+    Deploying to OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -237,10 +450,46 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../spring/" title="Spring modernization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Spring modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Spring modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../spring/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../spring/spring-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -249,10 +498,82 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../was90/" title="Operational modernization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       Operational modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Operational modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-analyze/" title="Analyze" class="md-nav__link">
+      Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-build-WCMT4IC/" title="Build (without scripts)" class="md-nav__link">
+      Build (without scripts)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-deploy/" title="Deploy" class="md-nav__link">
+      Deploy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -405,19 +726,21 @@
                 
                 <h1 id="session-state-management-considerations">Session state management considerations</h1>
 <p>One of the <a href="https://12factor.net/">12 factor</a> principles is that applications and services should be stateless. Many existing monolith applications rely heavily on HTTP sessions. When you are modernizing your application it is a good practice to rearchitect them to be stateless, but some times it is not an easy task and you need to postpone it for a while.</p>
-<p>There are following methods that you can use in container world to handle session state, depending on your requirements:
-- session affinity
-- session replication using caching mechanisms
-- session persistence using database</p>
+<p>There are following methods that you can use in container world to handle session state, depending on your requirements:</p>
+<ul>
+<li>session affinity</li>
+<li>session replication using caching mechanisms</li>
+<li>session persistence using database</li>
+</ul>
 <h2 id="session-affinity">Session affinity</h2>
-<p>Session affinity is the simplest mechanism for maintaining session state. Using this mechanism, requests from the same session will be routed to the same POD. Selecting this solution, you have to be aware that PODs are not like on-premise servers, they may be restarted much often, in many circumstances. So this solution might be applicable to applications that need relatively short lived sessions, and can tolerate loosing session data.</p>
+<p>Session affinity is the simplest mechanism for maintaining session state. Using this mechanism, requests from the same session will be routed to the same POD. Selecting this solution, you have to be aware that PODs are not like on-premise servers, they may be restarted moreoften, in many circumstances. So this solution might be applicable to applications that need relatively short lived sessions, and can tolerate loosing session data.</p>
 <h3 id="deploying-with-session-affinity">Deploying with session affinity</h3>
 <p>Session affinity on OpenShift utilizes Route configuration. You don't have to make any changes in your application code or during building application container, all is done on deployment time.</p>
 <p>In this example, a simple application has been deployed to WebSphere Liberty that displays the contents of the <em>session</em> and allows updates to be made to a <em>counter</em> that is stored in the session as well as displaying the name of the <em>pod</em> that services the request. There are multiple instances of the application pod running:</p>
-<div class="codehilite"><pre><span></span><span class="n">oc</span> <span class="k">get</span> <span class="n">pods</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">sample</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">bzpd7</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">10</span><span class="n">d</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">dnpsg</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">10</span><span class="n">d</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">g5c8k</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">21</span><span class="n">d</span>
+<div class="codehilite"><pre><span></span>oc get pods <span class="p">|</span> grep sample
+session-sample-1-bzpd7   <span class="m">1</span>/1     Running   <span class="m">0</span>          10d
+session-sample-1-dnpsg   <span class="m">1</span>/1     Running   <span class="m">0</span>          10d
+session-sample-1-g5c8k   <span class="m">1</span>/1     Running   <span class="m">0</span>          21d
 </pre></div>
 
 
@@ -426,13 +749,13 @@
 <p>After a few requests to the app, using the link or reloading the page, the the counter value that is taken from the session increases as shwon below. Note that the requests are routed to the same pod. Session affinity is working.</p>
 <p><img alt="app2" src="../images/sessions-run/oc-app2.jpg" /></p>
 <p>If the pod is then deleted it will be replaced by OpenShift:</p>
-<div class="codehilite"><pre><span></span><span class="n">oc</span> <span class="k">delete</span> <span class="n">pod</span> <span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">g5c8k</span>
-<span class="n">pod</span> <span class="ss">&quot;session-sample-1-g5c8k&quot;</span> <span class="n">deleted</span>
+<div class="codehilite"><pre><span></span>oc delete pod session-sample-1-g5c8k
+pod <span class="s2">&quot;session-sample-1-g5c8k&quot;</span> deleted
 
-<span class="n">oc</span> <span class="k">get</span> <span class="n">pods</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">sample</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">5</span><span class="n">hzd5</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">3</span><span class="n">m</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">7</span><span class="n">w8gh</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">23</span><span class="n">s</span>
-<span class="k">session</span><span class="o">-</span><span class="n">sample</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">dnpsg</span>   <span class="mi">1</span><span class="o">/</span><span class="mi">1</span>     <span class="n">Running</span>   <span class="mi">0</span>          <span class="mi">10</span><span class="n">d</span>
+oc get pods <span class="p">|</span> grep sample
+session-sample-1-5hzd5   <span class="m">1</span>/1     Running   <span class="m">0</span>          3m
+session-sample-1-7w8gh   <span class="m">1</span>/1     Running   <span class="m">0</span>          23s
+session-sample-1-dnpsg   <span class="m">1</span>/1     Running   <span class="m">0</span>          10d
 </pre></div>
 
 
@@ -628,6 +951,41 @@ Members <span class="o">{</span>size:3, ver:7<span class="o">}</span> <span clas
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../liberty-deploy/" title="Deploy" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Deploy
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../spring/" title="Overview" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Overview
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -645,7 +1003,7 @@ Members <span class="o">{</span>size:3, ver:7<span class="o">}</span> <span clas
       
     </div>
     
-      <script src="../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

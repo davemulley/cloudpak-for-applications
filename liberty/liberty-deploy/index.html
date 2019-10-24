@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
     
     
       
-        <title>Liberty - Deploy - Application Modernization</title>
+        <title>Deploy - Application Modernization</title>
       
     
     
@@ -77,7 +77,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#liberty-deploy" tabindex="1" class="md-skip">
+      <a href="#runtime-modernization-deploy" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -103,7 +103,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Liberty - Deploy
+                Deploy
               
             </span>
           
@@ -224,11 +224,221 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../" title="Runtime modernization" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
       Runtime modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Runtime modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-analyze/" title="Analyze" class="md-nav__link">
+      Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Deploy
+      </label>
+    
+    <a href="./" title="Deploy" class="md-nav__link md-nav__link--active">
+      Deploy
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-openshift-constructs" class="md-nav__link">
+    Red Hat OpenShift constructs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-jenkinsfile-for-the-pipeline" class="md-nav__link">
+    The Jenkinsfile for the pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-security-context-constraint" class="md-nav__link">
+    Create the Security Context Constraint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-projects" class="md-nav__link">
+    Create the projects
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-service-account" class="md-nav__link">
+    Create a service account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-jenkins" class="md-nav__link">
+    Deploy Jenkins
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-the-jenkins-service-account" class="md-nav__link">
+    Update the Jenkins service account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-the-deployment-templates" class="md-nav__link">
+    Import the deployment templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-deployment-definitions" class="md-nav__link">
+    Create the deployment definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-the-build-templates" class="md-nav__link">
+    Import the build templates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-build-definitions" class="md-nav__link">
+    Create the build definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-pipeline" class="md-nav__link">
+    Run the pipeline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validate-the-deployments" class="md-nav__link">
+    Validate the Deployments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review-and-next-steps" class="md-nav__link">
+    Review and Next Steps
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liberty-sessions/" title="Session state management" class="md-nav__link">
+      Session state management
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -237,10 +447,46 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../spring/" title="Spring modernization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
       Spring modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Spring modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../spring/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../spring/spring-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -249,10 +495,82 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../was90/" title="Operational modernization" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
       Operational modernization
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Operational modernization
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/" title="Overview" class="md-nav__link">
+      Overview
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-analyze/" title="Analyze" class="md-nav__link">
+      Analyze
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-build/" title="Build" class="md-nav__link">
+      Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-build-WCMT4IC/" title="Build (without scripts)" class="md-nav__link">
+      Build (without scripts)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../was90/tWAS-deploy/" title="Deploy" class="md-nav__link">
+      Deploy
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -284,8 +602,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#redhat-openshift-constructs" class="md-nav__link">
-    RedHat OpenShift constructs
+  <a href="#red-hat-openshift-constructs" class="md-nav__link">
+    Red Hat OpenShift constructs
   </a>
   
 </li>
@@ -400,8 +718,8 @@
                   <a href="https://github.com/ibm-cloud-architecture/cloudpak-for-applications/edit/master/docs/liberty/liberty-deploy.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="liberty-deploy">Liberty - Deploy</h1>
-<p>This section covers how to deploy the application to RedHat OpenShift using an automated CI/CD pipeline. The diagram below shows the flow of the pipeline which starts when the developer checks their code in to Git and ends with the application being deployed in Production.</p>
+                <h1 id="runtime-modernization-deploy">Runtime Modernization - Deploy</h1>
+<p>This section covers how to deploy the application to Red Hat OpenShift using an automated CI/CD pipeline. The diagram below shows the flow of the pipeline which starts when the developer checks their code in to Git and ends with the application being deployed in Production.</p>
 <p><img alt="Flow" src="../images/liberty-deploy/overview.jpg" /></p>
 <ol>
 <li>the developer checks their code in to <code>git</code></li>
@@ -421,9 +739,9 @@
 <h2 id="summary">Summary</h2>
 <p>This section has the following steps:</p>
 <ol>
-<li>RedHat OpenShift terminology and constructs</li>
+<li>Red Hat OpenShift terminology and constructs</li>
 <li>The <code>Jenkinsfile</code> for the pipeline</li>
-<li>Create the <code>Security Context Constraint</code> required for WebSphere to run on RedHat OpenShift</li>
+<li>Create the <code>Security Context Constraint</code> required for WebSphere to run on Red Hat OpenShift</li>
 <li>Create the <code>build</code>, <code>dev</code>, <code>stage</code> and <code>prod</code> projects</li>
 <li>Create a new <code>Service Account</code> and bind it to the <code>Security Context Constraint</code> in the <code>dev</code>, <code>stage</code> and <code>prod</code> projects</li>
 <li>Deploy Jenkins in the <code>build</code> namespace</li>
@@ -434,7 +752,7 @@
 <li>Create the <code>ImageStream</code> and <code>BuildConfig</code> definitions in the <code>build</code> project</li>
 <li>Trigger the pipeline and validate the application is running</li>
 </ol>
-<h2 id="redhat-openshift-constructs">RedHat OpenShift constructs</h2>
+<h2 id="red-hat-openshift-constructs">Red Hat OpenShift constructs</h2>
 <p>It is assumed that the reader is familiar with the following basic constructs provided by Kubernetes:</p>
 <ul>
 <li><a href="https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/">Pod</a></li>
@@ -442,7 +760,7 @@
 <li><a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">ServiceAccount</a></li>
 <li><a href="https://kubernetes.io/docs/concepts/services-networking/service/">Service</a></li>
 </ul>
-<p>RedHat OpenShift has the following constructs that are used in this scenario:
+<p>Red Hat OpenShift has the following constructs that are used in this scenario:
 - <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html">Route</a>
 - <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/managing_images.html">ImageStream</a>
 - <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/builds/build_strategies.html">BuildConfig</a>
@@ -473,7 +791,7 @@
 
 
 <h2 id="create-the-projects">Create the projects</h2>
-<p>Four RedHat OpenShift projects are required in this scenario:
+<p>Four Red Hat OpenShift projects are required in this scenario:
 - Build: this project will contain the Jenkins server and the artifacts used to build the application image<br />
 - Dev: this is the <code>development</code> environment for this application
 - Stage: this is the <code>staging</code> environment for this application
@@ -497,7 +815,7 @@
 
 
 <h2 id="deploy-jenkins">Deploy Jenkins</h2>
-<p>Some RedHat OpenShift clusters are configured to automatically provision a Jenkins instance in a build project. The steps below can be used if your cluster is not configured for automatic Jenkins provisioning:</p>
+<p>Some Red Hat OpenShift clusters are configured to automatically provision a Jenkins instance in a build project. The steps below can be used if your cluster is not configured for automatic Jenkins provisioning:</p>
 <div class="codehilite"><pre><span></span><span class="n">oc</span> <span class="n">project</span> <span class="n">cos</span><span class="o">-</span><span class="n">liberty</span><span class="o">-</span><span class="n">build</span>
 <span class="n">oc</span> <span class="k">new</span><span class="o">-</span><span class="n">app</span> <span class="n">jenkins</span><span class="o">-</span><span class="n">persistent</span>
 </pre></div>
@@ -513,7 +831,7 @@
 
 
 <h2 id="import-the-deployment-templates">Import the deployment templates</h2>
-<p>RedHat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/templates.html">templates</a> are used to make artifact creation easier and repeatable. The template definition provided <a href="https://github.com/ibm-cloud-architecture/cloudpak-for-applications/blob/liberty/Deployment/OpenShift/template-liberty-deploy.yaml">here</a> defines a Kubernetes <a href="https://kubernetes.io/docs/concepts/services-networking/service/"><code>Service</code></a>, <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html"><code>Route</code></a> and <a href="https://docs.openshift.com/container-platform/3.11/architecture/core_concepts/deployments.html#deployments-and-deployment-configurations"><code>DeploymentConfig</code></a> for the CustomerOrderServices application.</p>
+<p>Red Hat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/templates.html">templates</a> are used to make artifact creation easier and repeatable. The template definition provided <a href="https://github.com/ibm-cloud-architecture/cloudpak-for-applications/blob/liberty/Deployment/OpenShift/template-liberty-deploy.yaml">here</a> defines a Kubernetes <a href="https://kubernetes.io/docs/concepts/services-networking/service/"><code>Service</code></a>, <a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/routes.html"><code>Route</code></a> and <a href="https://docs.openshift.com/container-platform/3.11/architecture/core_concepts/deployments.html#deployments-and-deployment-configurations"><code>DeploymentConfig</code></a> for the CustomerOrderServices application.</p>
 <p>The <code>gse-liberty-deploy</code> template defines the following:
 - <code>service</code> listening on ports <code>9080</code>, <code>9443</code> and <code>9082</code>
 - <code>route</code> to expose the <code>9443</code> port externally
@@ -531,7 +849,7 @@
 
 
 <h2 id="create-the-deployment-definitions">Create the deployment definitions</h2>
-<p>In this step the <code>gse-liberty-deploy</code> template will be used to create a RedHat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/application_lifecycle/new_app.html">application</a> named <code>cos-liberty</code> in the <code>dev</code>, <code>stage</code> and <code>prod</code> namespaces.</p>
+<p>In this step the <code>gse-liberty-deploy</code> template will be used to create a Red Hat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/application_lifecycle/new_app.html">application</a> named <code>cos-liberty</code> in the <code>dev</code>, <code>stage</code> and <code>prod</code> namespaces.</p>
 <p>The result will be:
 - <code>service</code> listening on ports <code>9080</code>, <code>9443</code> and <code>9082</code>
 - <code>route</code> to expose the <code>9443</code> port externally
@@ -558,7 +876,7 @@
 
 
 <h2 id="create-the-build-definitions">Create the build definitions</h2>
-<p>In this step the <code>gse-liberty-build</code> template will be used to create a RedHat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/application_lifecycle/new_app.html">application</a> named <code>cos-liberty</code> in the <code>build</code> namespaces.</p>
+<p>In this step the <code>gse-liberty-build</code> template will be used to create a Red Hat OpenShift <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/application_lifecycle/new_app.html">application</a> named <code>cos-liberty</code> in the <code>build</code> namespaces.</p>
 <p>The result will be:
 - An <a href="https://docs.openshift.com/container-platform/3.11/dev_guide/managing_images.html">ImageStream</a> for the application image. This will be populated by the Jenkins Pipeline
 - An ImageStream for WebSphere Liberty which will pull down the latest version of the <code>ibmcom/websphere-liberty:kernel-ubi-min</code> image and will monitor DockerHub for any updates.
@@ -570,7 +888,7 @@
 
 
 <h2 id="run-the-pipeline">Run the pipeline</h2>
-<p>The newly created pipeline can be started from the RedHat OpenShift console which allows access to the Jenkins logs but also tracks the progress in the OCP console.</p>
+<p>The newly created pipeline can be started from the Red Hat OpenShift console which allows access to the Jenkins logs but also tracks the progress in the OCP console.</p>
 <ol>
 <li>Navigate to <strong>Application Console --&gt; Customer Order Services on Liberty - Build --&gt; Builds --&gt; Pipelines</strong> and click the <strong>Start Pipeline</strong> button</li>
 </ol>
@@ -594,7 +912,7 @@
 <ol>
 <li>When the <em>Promote application to Production</em> question is displayed, click <strong>Proceed</strong></li>
 </ol>
-<p><img alt="Promote" src="images/twas-deploy/promote.jpg" /></p>
+<p><img alt="Promote" src="../../was90/images/tWAS-deploy/promote.jpg" /></p>
 <ol>
 <li>Return to the OpenShift Console and validate that the pipeline is now complete</li>
 </ol>
@@ -602,23 +920,25 @@
 <h2 id="validate-the-deployments">Validate the Deployments</h2>
 <p>Now that the pipeline is complete, validate the Customer Order Services application is deployed and running in <code>dev</code>, <code>stage</code> and <code>prod</code></p>
 <ol>
-<li>In the OpenShift Console, navigate to <strong>Application Console --&gt; Customer Order Services on Liberty - Dev --&gt; Applications --&gt; Deployments</strong> and click on the link in the <strong>Latest Version</strong> column</li>
-</ol>
-<p><img alt="Deployment" src="../images/liberty-deploy/deployment.jpg" /></p>
-<ol>
-<li>Information about the deployment will be displayed including the <strong>image</strong> that is being used (note the <strong>tag</strong> on the image as it will be the same in the <code>stage</code> and <code>prod</code> deployments). After a few minutes the container will be marked as <strong>ready</strong></li>
-</ol>
-<p><img alt="Pods" src="../images/liberty-deploy/pods.jpg" /></p>
-<ol>
-<li>Click <strong>Applications --&gt; Routes</strong> and click on the <strong>route</strong> for the application. Note that the URL is &lt; application_name &gt;-&lt; project_name &gt;.&lt; ocp cluster url &gt;. In this case the project name is <code>cos-liberty-dev</code></li>
-</ol>
-<p><img alt="Route" src="../images/liberty-deploy/route.jpg" /></p>
-<ol>
-<li>Add <code>/CustomerOrderServicesWeb</code> to the end of the URL in the browser to access the application</li>
-</ol>
-<p><img alt="Dev Running" src="../images/liberty-deploy/dev-running.jpg" /></p>
-<ol>
-<li>Repeat the validations for the <code>stage</code> and <code>prod</code> Projects.</li>
+<li>
+<p>In the OpenShift Console, navigate to <strong>Application Console --&gt; Customer Order Services on Liberty - Dev --&gt; Applications --&gt; Deployments</strong> and click on the link in the <strong>Latest Version</strong> column
+  <img alt="Deployment" src="../images/liberty-deploy/deployment.jpg" /></p>
+</li>
+<li>
+<p>Information about the deployment will be displayed including the <strong>image</strong> that is being used (note the <strong>tag</strong> on the image as it will be the same in the <code>stage</code> and <code>prod</code> deployments). After a few minutes the container will be marked as <strong>ready</strong><br />
+<img alt="Pods" src="../images/liberty-deploy/pods.jpg" /></p>
+</li>
+<li>
+<p>Click <strong>Applications --&gt; Routes</strong> and click on the <strong>route</strong> for the application. Note that the URL is &lt; application_name &gt;-&lt; project_name &gt;.&lt; ocp cluster url &gt;. In this case the project name is <code>cos-liberty-dev</code><br />
+<img alt="Route" src="../images/liberty-deploy/route.jpg" /></p>
+</li>
+<li>
+<p>Add <code>/CustomerOrderServicesWeb</code> to the end of the URL in the browser to access the application<br />
+<img alt="Dev Running" src="../images/liberty-deploy/dev-running.jpg" /></p>
+</li>
+<li>
+<p>Repeat the validations for the <code>stage</code> and <code>prod</code> Projects.</p>
+</li>
 </ol>
 <h2 id="review-and-next-steps">Review and Next Steps</h2>
 <p>In this section you configured a CI/CD pipeline for the CustomerOrderServices application that builds a single immutable image for the latest version of the application and then deploys it to three different environments.  </p>
@@ -639,6 +959,41 @@
         
 <footer class="md-footer">
   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../liberty-build/" title="Build" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Build
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../liberty-sessions/" title="Session state management" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Session state management
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
@@ -656,7 +1011,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.c648116f.js"></script>
+      <script src="../../assets/javascripts/application.ac79c3b0.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
